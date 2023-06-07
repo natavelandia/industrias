@@ -7,7 +7,7 @@
 Este proyecto exhibe la implementación de una aplicación web utilizando Flask. Su propósito principal es llevar a cabo la predicción de el puntaje total de catación de café.
 # :heavy_check_mark: Uso del modelo desplegado en Azure
  ```shell
-[https://velandiados.azurewebsites.net/](https://coffecup.azurewebsites.net/)
+https://velandiados.azurewebsites.net/](https://coffecup.azurewebsites.net/
 ```
 # 🛠️ Abre y ejecuta el proyecto local
 
