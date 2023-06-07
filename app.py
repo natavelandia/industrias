@@ -3,7 +3,7 @@ import os
 import requests, json
 import numpy as np
 import pickle
-
+import joblib
 
 from flask import Flask,render_template
 from sklearn.linear_model import Ridge
@@ -12,10 +12,13 @@ from sklearn.decomposition import PCA
 from flask import Flask, render_template, request, session
 
 app= Flask (__name__)
+@app.route('/')
+def init():
+    global model
+    # Get the path to the registered model file and load it
+    model_path = 'ridge.pkl'
+    model = joblib.load(model_path)
 
-model_R= pickle.load(open('ridge.pkl', 'rb'))
-#scaler.pkl
-#pca.pkl
 
 @app.route('/')
 def index():
