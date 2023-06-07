@@ -12,6 +12,7 @@ from sklearn.decomposition import PCA
 from flask import Flask, render_template, request, session
 app= Flask (__name__)
 global modelo
+@app.route('/')
 with open('ridge.pkl', 'rb') as archivo:
     modelo = pickle.load(archivo)
 @app.route('/')
