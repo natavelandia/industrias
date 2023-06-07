@@ -11,8 +11,9 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler, On
 from sklearn.decomposition import PCA  
 from flask import Flask, render_template, request, session
 app= Flask (__name__)
-
-
+global modelo
+with open('ridge.pkl', 'rb') as archivo:
+    modelo = pickle.load(archivo)
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -41,6 +42,5 @@ def home():
     return render_template('index.html')
 
 if __name__=="__main__":
-    with open('ridge.pkl', 'rb') as archivo:
-        modelo = pickle.load(archivo)
+
     app.run(debug=True)
