@@ -13,7 +13,7 @@ from flask import Flask, render_template, request, session
 import joblib
 app= Flask (__name__)
 
-
+model= joblib.load(open("ridge.pkl", "rb"))
 
 @app.route('/')
 def index():
