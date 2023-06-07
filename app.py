@@ -12,9 +12,7 @@ from sklearn.decomposition import PCA
 from flask import Flask, render_template, request, session
 app= Flask (__name__)
 
-model = pickle.load(open( "ridge.pkl", "rb" ))
-scalar = pickle.load(open( "scaler.pkl", "rb" ))
-model = pickle.load(open( "pca.pkl", "rb" ))
+
 
 @app.route('/')
 def index():
