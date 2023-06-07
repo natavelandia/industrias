@@ -29,8 +29,7 @@ def home():
         general = request.form['general']
         #'Aroma', 'Flavor', 'Aftertaste', 'Acidity', 'Body', 'Balance', 'Overall'
         
-        with open('ridge.pkl', 'rb') as archivo:
-            modelo = pickle.load(archivo)
+
 
         
 
@@ -42,4 +41,6 @@ def home():
     return render_template('index.html')
 
 if __name__=="__main__":
+    with open('ridge.pkl', 'rb') as archivo:
+        modelo = pickle.load(archivo)
     app.run(debug=True)
