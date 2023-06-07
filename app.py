@@ -49,7 +49,7 @@ def home():
 
 
 
-        return render_template('index.html', feature=aroma, puntaje=aroma)
+        return render_template('index.html', feature=feat_html, puntaje=prediction)
 
     return render_template('index.html')
 
