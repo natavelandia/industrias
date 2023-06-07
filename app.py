@@ -10,10 +10,10 @@ from sklearn.linear_model import Ridge
 from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler, OneHotEncoder
 from sklearn.decomposition import PCA  
 from flask import Flask, render_template, request, session
-import joblib
+
 app= Flask (__name__)
 
-model= joblib.load(open("ridge.pkl", "rb"))
+model_R= pickle.load(open('ridge.pkl', 'rb'))
 #scaler.pkl
 #pca.pkl
 
