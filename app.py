@@ -12,6 +12,7 @@ from sklearn.decomposition import PCA
 from flask import Flask, render_template, request, session
 app= Flask (__name__)
 
+model = pickle.load(open( "ridge.pkl.pkl", "rb" ))
 
 @app.route('/')
 def index():
