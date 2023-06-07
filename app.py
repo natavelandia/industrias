@@ -11,9 +11,6 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler, On
 from sklearn.decomposition import PCA  
 from flask import Flask, render_template, request, session
 app= Flask (__name__)
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 
 
