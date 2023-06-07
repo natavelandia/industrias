@@ -14,6 +14,8 @@ import joblib
 app= Flask (__name__)
 
 model= joblib.load(open("ridge.pkl", "rb"))
+#scaler.pkl
+#pca.pkl
 
 @app.route('/')
 def index():
