@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programa para predecir el puntaje por Copa de Café</title>
+  <style>
+    body {
+        background-color: #333;
+        color: #5faed3;
+        padding: 20px;
+        text-align: center;
+        font-family: Lucida Bright, sans-serif;
+    }
+    
+  </style>
+
+<style>
+    h2 {
+        font-size: 24px;
+        color: #4496e2;
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+  <h1>Programa para predecir el puntaje por Copa de Café</h1>
+  <form method="POST">
+    <h2>Entradas:</h2>
+    <label for="aroma">Aroma:</label>
+    <input type="number" id="aroma" name="aroma" step="0.01" required><br>
+
+    <label for="sabor">Sabor:</label>
+    <input type="number" id="sabor" name="sabor" step="0.01" required><br>
+
+    <label for="regusto">Regusto:</label>
+    <input type="number" id="regusto" name="regusto" step="0.01" required><br>
+
+    <label for="acidez">Acidez:</label>
+    <input type="number" id="acidez" name="acidez" step="0.01" required><br>
+
+    <label for="cuerpo">Cuerpo:</label>
+    <input type="number" id="cuerpo" name="cuerpo" step="0.01" required><br>
+
+    <label for="balance">Balance:</label>
+    <input type="number" id="balance" name="balance" step="0.01" required><br>
+
+    <label for="general">General:</label>
+    <input type="number" id="general" name="general" step="0.01" required><br>
+
+
+
+    <button type="submit">Predecir</button>
+
+
+    {% if puntaje %}
+
+    <h2>Puntaje total de taza:</h2>
+
+    <label for="puntaje">El puntaje de las caracterísitcas: </label>
+    <p>{{ feature }}</p>
+    <p>es de:</p>
+    <p>{{ puntaje }}</p>
+    {% endif %}
+  </form>
+</body>
+</html>
