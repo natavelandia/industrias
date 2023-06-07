@@ -12,12 +12,7 @@ from sklearn.decomposition import PCA
 from flask import Flask, render_template, request, session
 
 app= Flask (__name__)
-@app.route('/')
-def init():
-    global model
-    # Get the path to the registered model file and load it
-    model_path = 'ridge.pkl'
-    model = joblib.load(model_path)
+
 
 
 @app.route('/')
