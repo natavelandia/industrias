@@ -28,9 +28,9 @@ def home():
         balance = request.form['balance']
         general = request.form['general']
         #'Aroma', 'Flavor', 'Aftertaste', 'Acidity', 'Body', 'Balance', 'Overall'
-
-
         
+        with open('ridge.pkl', 'rb') as archivo:
+            modelo = pickle.load(archivo)
 
         
 
