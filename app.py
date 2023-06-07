@@ -27,26 +27,10 @@ def home():
         general = request.form['general']
         #'Aroma', 'Flavor', 'Aftertaste', 'Acidity', 'Body', 'Balance', 'Overall'
 
-        with open('ridge.pkl', 'rb') as archivo:
-            modelo = pickle.load(archivo)
-        with open('scaler.pkl', 'rb') as archivo:
-            scalar = pickle.load(archivo)
-        with open('pca.pkl', 'rb') as archivo:
-            pca = pickle.load(archivo)
-
-        feature=np.asarray([aroma,sabor,regusto,acidez,cuerpo,balance,general])
-        # con 8.58,8.50,8.42,8.58,8.25,8.42,8.58 da 89.33
-        feat_html=feature
-        feature=feature.reshape(1, -1)
-        print(feature.shape)
-        scaler = scalar.transform(feature)
-        pc = pca.transform(scaler)
-        prediction = np.round(modelo.predict(pc),2)
-
-        print(prediction)
 
 
-        return render_template('index.html', feature=feat_html, puntaje=prediction)
+
+        return render_template('index.html', feature=aroma, puntaje=aroma)
 
     return render_template('index.html')
 
